@@ -40,21 +40,27 @@ beat_ann = {"N": "Normal beat",
             "Q": "Unclassifiable beat",
             "?": "Beat not classified during learning"}
 
-sb_ann = {"N": "N",
-          "L": "N",
-          "R": "N",
-          "A": "SVEB",
-          "a": "SVEB",
-          "J": "SVEB",
-          "S": "SVEB",
-          "e": "SVEB",
-          "j": "SVEB",
-          "V": "VEB",
-          "E": "VEB",
-          "F": "F",
-          "Q": "Q",
-          "/": "Q",
-          "f": "Q"}
+sb_ann = {"N": "Normal",
+          "SVEB": "Supraventricular ectopic beat",
+          "VEB": "Ventricular ectopic beat",
+          "F": "Fusion beat",
+          "Q": "Unknown beat"}
+
+b_to_sb = {"N": "N",
+           "L": "N",
+           "R": "N",
+           "A": "SVEB",
+           "a": "SVEB",
+           "J": "SVEB",
+           "S": "SVEB",
+           "e": "SVEB",
+           "j": "SVEB",
+           "V": "VEB",
+           "E": "VEB",
+           "F": "F",
+           "Q": "Q",
+           "/": "Q",
+           "f": "Q"}
 
 sb_ann_palette = ["#004777",
                   "#004777",
@@ -83,8 +89,6 @@ sb_ann_class_palette = ["#004777",
                         "#FF7700",
                         "#EFD28D",
                         "#00AFB5"]
-
-
 
 non_beat_ann = {"[": "Start of ventricular flutter/fibrillation",
                 "!": "Ventricular flutter wave",
@@ -126,5 +130,6 @@ rythm_ann = {"AB": "Atrial bigeminy",
              "VT": "Ventricular tachycardia"}
 
 TOT_BEAT = len(beat_ann)
+TOT_SBEAT = len(sb_ann_class)
 TOT_NON_BEAT = len(non_beat_ann)
 TOT_RYTHM = len(rythm_ann)
